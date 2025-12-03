@@ -4,13 +4,13 @@ git add .
 
 git commit -m "Example java program"
 
-GitHub account in browser
+*GitHub account in browser*
 
-create repo  name JFS\_VI-SEM
+*create repo  name JFS\_VISEM*
 
-copy http link
+*copy http link*
 
-git remote add origin (http link)
+*git remote add origin (http link)*
 
 git push origin main/master
 
