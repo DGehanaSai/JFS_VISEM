@@ -74,3 +74,16 @@ button {
 button:hover {
     background: linear-gradient(135deg, #0056b3, #003f7f);
 }
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0fff0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+}
+.message-box h3 {
+    margin-top: 0;
+    color: green;
+}

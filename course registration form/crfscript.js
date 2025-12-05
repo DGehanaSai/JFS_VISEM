@@ -1,6 +1,7 @@
 let subjects = document.querySelectorAll(".subject");
 let totalBox = document.getElementById("total");
 let regForm = document.getElementById("regForm");
+let messageBox = document.getElementById("messageBox");
 subjects.forEach(item => {
     item.addEventListener("change", () => {
         let total = 0;
@@ -23,11 +24,12 @@ regForm.addEventListener("submit", (e) => {
             total += parseInt(sub.value);
         }
     });
-    alert(
-        "Student Name: " + name + "\n\n" +
-        "Selected Subjects:\n" + selectedSubjects.join("\n") + "\n\n" +
-        "Total Fee: ₹" + total
-    );
+     messageBox.innerHTML = `
+        <h3>Registration Details</h3>
+        <p><strong>Student Name:</strong> ${name}</p>
+        <p><strong>Selected Subjects:</strong><br>${selectedSubjects.join("<br>")}</p>
+        <p><strong>Total Fee:</strong> ₹${total}</p>
+    `;
     regForm.reset();
     totalBox.innerText = "₹0";
 });
