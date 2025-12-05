@@ -40,18 +40,31 @@
       transition: box-shadow 0.3s ease-in-out;
     }
     .info img.gosling-square {
-      border-radius: 0; /* square */
-      box-shadow: 0 0 20px 5px #00ffcc, 0 0 40px 10px #0099ff; /* glow effect */
+      border-radius: 0;
+      animation: glowBlink 1.5s infinite alternate;
     }
+
+    @keyframes glowBlink {
+      0% {
+        box-shadow: 0 0 10px 2px #00ffcc, 0 0 20px 5px #0099ff;
+      }
+      50% {
+        box-shadow: 0 0 20px 5px #00ffcc, 0 0 40px 10px #0099ff;
+      }
+      100% {
+        box-shadow: 0 0 10px 2px #00ffcc, 0 0 20px 5px #0099ff;
+      }
+    }
+
     .description {
       font-size: 18px;
       width: 400px;
       text-align: left;
       background: white;
       padding: 20px;
-      border-radius: 0; /* rectangular box */
+      border-radius: 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border: 2px solid #3498db; /* optional border for emphasis */
+      border: 2px solid #3498db;
     }
   </style>
 </head>
